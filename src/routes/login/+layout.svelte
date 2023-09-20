@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import AnimatedRoute from '$lib/components/AnimatedRoute.svelte';
 
 	$: isOnUsernamePage = $page.route.id?.match(/username|photo/g);
 	$: isOnPhotoPage = $page.route.id?.includes('photo');
@@ -13,8 +14,10 @@
 	</ul>
 </nav>
 
-<main class="card w-4/6 bg-neutral text-neutral-content mx-auto">
-	<div class="card-body items-center text-center">
-		<slot />
-	</div>
-</main>
+<AnimatedRoute>
+	<main class="card w-4/6 bg-neutral text-neutral-content mx-auto">
+		<div class="card-body items-center text-center">
+			<slot />
+		</div>
+	</main>
+</AnimatedRoute>
