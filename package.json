@@ -32,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^10.4.0"
+		"daisyui": "^3.7.6",
+		"firebase": "^10.4.0",
+		"firebase-admin": "^11.10.1"
 	}
 }
